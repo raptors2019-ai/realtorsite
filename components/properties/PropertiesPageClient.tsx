@@ -36,13 +36,13 @@ export default function PropertiesPageClient({
 
       {/* Results Count */}
       <div className="flex items-center justify-between">
-        <p className="text-gray-400 text-sm">
+        <p className="text-[#57534e] text-sm">
           Showing{" "}
-          <span className="font-semibold text-white">
+          <span className="font-semibold text-[#0a1628]">
             {displayedProperties.length}
           </span>{" "}
           of{" "}
-          <span className="font-semibold text-white">
+          <span className="font-semibold text-[#0a1628]">
             {initialProperties.length}
           </span>{" "}
           properties
