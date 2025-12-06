@@ -1,0 +1,346 @@
+[
+  {
+    "id": "1",
+    "title": "Luxurious Modern Home in Mississauga",
+    "description": "Stunning 4-bedroom family home with upgraded finishes throughout. Features include hardwood floors, gourmet kitchen with quartz countertops, finished basement, and beautifully landscaped backyard. Walking distance to top-rated schools and parks.",
+    "price": 1299000,
+    "type": "house",
+    "status": "for-sale",
+    "location": {
+      "address": "123 Maple Street",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "postalCode": "L5B 2K3",
+      "coordinates": { "lat": 43.5890, "lng": -79.6441 }
+    },
+    "details": {
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "sqft": 2400,
+      "lotSize": 5000,
+      "yearBuilt": 2018,
+      "parking": 2
+    },
+    "features": ["Hardwood Floors", "Granite Countertops", "Finished Basement", "Walk-out Deck", "Double Garage", "Smart Home"],
+    "images": [
+      { "url": "/images/properties/house1-1.jpg", "alt": "Front exterior view", "isPrimary": true },
+      { "url": "/images/properties/house1-2.jpg", "alt": "Living room", "isPrimary": false }
+    ],
+    "agent": {
+      "name": "Niruban",
+      "phone": "(416) 555-0123",
+      "email": "niruban@realestate.com"
+    },
+    "createdAt": "2024-12-01T10:00:00Z",
+    "updatedAt": "2024-12-01T10:00:00Z"
+  },
+  {
+    "id": "2",
+    "title": "Downtown Toronto Condo with Skyline Views",
+    "description": "Bright and modern 2-bedroom condo in the heart of downtown. Floor-to-ceiling windows with breathtaking city views. Building amenities include gym, pool, concierge, and party room. Steps to transit, shopping, and entertainment.",
+    "price": 825000,
+    "type": "condo",
+    "status": "for-sale",
+    "location": {
+      "address": "456 Bay Street, Unit 2401",
+      "city": "Toronto",
+      "province": "Ontario",
+      "postalCode": "M5H 2Y4",
+      "coordinates": { "lat": 43.6532, "lng": -79.3832 }
+    },
+    "details": {
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "sqft": 950,
+      "yearBuilt": 2020,
+      "parking": 1
+    },
+    "features": ["Floor-to-ceiling Windows", "Stainless Steel Appliances", "In-suite Laundry", "Balcony", "24hr Concierge", "Gym"],
+    "images": [
+      { "url": "/images/properties/condo1-1.jpg", "alt": "Living room with view", "isPrimary": true },
+      { "url": "/images/properties/condo1-2.jpg", "alt": "Kitchen", "isPrimary": false }
+    ],
+    "agent": {
+      "name": "Niruban",
+      "phone": "(416) 555-0123",
+      "email": "niruban@realestate.com"
+    },
+    "createdAt": "2024-11-28T14:30:00Z",
+    "updatedAt": "2024-11-28T14:30:00Z"
+  },
+  {
+    "id": "3",
+    "title": "Spacious Townhouse in Brampton",
+    "description": "Recently renovated 3-bedroom townhouse perfect for growing families. Open-concept main floor, updated kitchen and bathrooms, finished basement with rec room. Close to schools, shopping centers, and highway access.",
+    "price": 749000,
+    "type": "townhouse",
+    "status": "for-sale",
+    "location": {
+      "address": "789 Oak Avenue",
+      "city": "Brampton",
+      "province": "Ontario",
+      "postalCode": "L6Y 3M9",
+      "coordinates": { "lat": 43.7315, "lng": -79.7624 }
+    },
+    "details": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "sqft": 1650,
+      "yearBuilt": 2015,
+      "parking": 2
+    },
+    "features": ["Open Concept", "Renovated Kitchen", "Finished Basement", "Private Backyard", "Attached Garage"],
+    "images": [
+      { "url": "/images/properties/townhouse1-1.jpg", "alt": "Front view", "isPrimary": true },
+      { "url": "/images/properties/townhouse1-2.jpg", "alt": "Kitchen and dining", "isPrimary": false }
+    ],
+    "agent": {
+      "name": "Niruban",
+      "phone": "(416) 555-0123",
+      "email": "niruban@realestate.com"
+    },
+    "createdAt": "2024-11-25T09:15:00Z",
+    "updatedAt": "2024-11-25T09:15:00Z"
+  },
+  {
+    "id": "4",
+    "title": "Executive Home in Oakville",
+    "description": "Prestigious 5-bedroom executive home in sought-after Oakville neighborhood. Features include chef's kitchen, spa-like bathrooms, home office, wine cellar, and professionally landscaped grounds. Steps to lakefront and marina.",
+    "price": 2450000,
+    "type": "house",
+    "status": "for-sale",
+    "location": {
+      "address": "321 Lakeshore Road",
+      "city": "Oakville",
+      "province": "Ontario",
+      "postalCode": "L6K 1E6",
+      "coordinates": { "lat": 43.4675, "lng": -79.6877 }
+    },
+    "details": {
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "sqft": 4200,
+      "lotSize": 7500,
+      "yearBuilt": 2016,
+      "parking": 3
+    },
+    "features": ["Chef's Kitchen", "Wine Cellar", "Home Office", "Spa Bathroom", "Triple Garage", "Pool"],
+    "images": [
+      { "url": "/images/properties/house2-1.jpg", "alt": "Luxury exterior", "isPrimary": true },
+      { "url": "/images/properties/house2-2.jpg", "alt": "Gourmet kitchen", "isPrimary": false }
+    ],
+    "agent": {
+      "name": "Niruban",
+      "phone": "(416) 555-0123",
+      "email": "niruban@realestate.com"
+    },
+    "createdAt": "2024-11-20T11:00:00Z",
+    "updatedAt": "2024-11-20T11:00:00Z"
+  },
+  {
+    "id": "5",
+    "title": "Cozy Starter Home in Etobicoke",
+    "description": "Perfect starter home or investment property! This charming 3-bedroom bungalow features updated windows, roof, and furnace. Large lot with potential for addition or renovation. Great neighborhood with excellent schools nearby.",
+    "price": 899000,
+    "type": "house",
+    "status": "for-sale",
+    "location": {
+      "address": "567 Pine Street",
+      "city": "Etobicoke",
+      "province": "Ontario",
+      "postalCode": "M9P 2V4",
+      "coordinates": { "lat": 43.6964, "lng": -79.5469 }
+    },
+    "details": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "sqft": 1450,
+      "lotSize": 4500,
+      "yearBuilt": 1965,
+      "parking": 1
+    },
+    "features": ["Updated Windows", "New Roof", "Large Lot", "Hardwood Floors", "Basement Potential"],
+    "images": [
+      { "url": "/images/properties/house3-1.jpg", "alt": "Charming bungalow", "isPrimary": true },
+      { "url": "/images/properties/house3-2.jpg", "alt": "Living room", "isPrimary": false }
+    ],
+    "agent": {
+      "name": "Niruban",
+      "phone": "(416) 555-0123",
+      "email": "niruban@realestate.com"
+    },
+    "createdAt": "2024-12-02T16:45:00Z",
+    "updatedAt": "2024-12-02T16:45:00Z"
+  },
+  {
+    "id": "6",
+    "title": "Modern Condo in North York",
+    "description": "Bright corner unit with 2 bedrooms and den. Recently painted with modern light fixtures. Building amenities include fitness center, party room, and visitor parking. Close to TTC, shopping, and restaurants.",
+    "price": 675000,
+    "type": "condo",
+    "status": "for-sale",
+    "location": {
+      "address": "890 Sheppard Avenue E, Unit 1505",
+      "city": "North York",
+      "province": "Ontario",
+      "postalCode": "M2K 1E3",
+      "coordinates": { "lat": 43.7615, "lng": -79.3804 }
+    },
+    "details": {
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "sqft": 850,
+      "yearBuilt": 2017,
+      "parking": 1
+    },
+    "features": ["Corner Unit", "Den", "In-suite Laundry", "Balcony", "Fitness Center", "Party Room"],
+    "images": [
+      { "url": "/images/properties/condo2-1.jpg", "alt": "Modern living space", "isPrimary": true },
+      { "url": "/images/properties/condo2-2.jpg", "alt": "Bedroom", "isPrimary": false }
+    ],
+    "agent": {
+      "name": "Niruban",
+      "phone": "(416) 555-0123",
+      "email": "niruban@realestate.com"
+    },
+    "createdAt": "2024-11-30T13:20:00Z",
+    "updatedAt": "2024-11-30T13:20:00Z"
+  },
+  {
+    "id": "7",
+    "title": "Family Home in Markham",
+    "description": "Beautiful 4-bedroom home in family-friendly Markham neighborhood. Features include upgraded kitchen with island, master ensuite, finished basement with separate entrance, and fenced backyard. Close to top schools and parks.",
+    "price": 1450000,
+    "type": "house",
+    "status": "for-sale",
+    "location": {
+      "address": "234 Willow Court",
+      "city": "Markham",
+      "province": "Ontario",
+      "postalCode": "L3R 5K8",
+      "coordinates": { "lat": 43.8561, "lng": -79.3370 }
+    },
+    "details": {
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "sqft": 2600,
+      "lotSize": 4800,
+      "yearBuilt": 2019,
+      "parking": 2
+    },
+    "features": ["Upgraded Kitchen", "Master Ensuite", "Finished Basement", "Fenced Yard", "Double Garage"],
+    "images": [
+      { "url": "/images/properties/house4-1.jpg", "alt": "Beautiful family home", "isPrimary": true },
+      { "url": "/images/properties/house4-2.jpg", "alt": "Modern kitchen", "isPrimary": false }
+    ],
+    "agent": {
+      "name": "Niruban",
+      "phone": "(416) 555-0123",
+      "email": "niruban@realestate.com"
+    },
+    "createdAt": "2024-11-27T10:30:00Z",
+    "updatedAt": "2024-11-27T10:30:00Z"
+  },
+  {
+    "id": "8",
+    "title": "Luxury Penthouse in Yorkville",
+    "description": "Exclusive 3-bedroom penthouse in prestigious Yorkville. Soaring 12ft ceilings, custom millwork throughout, private terrace with BBQ hookup. Building offers white-glove concierge service, valet parking, and resort-style amenities.",
+    "price": 3200000,
+    "type": "condo",
+    "status": "for-sale",
+    "location": {
+      "address": "100 Bloor Street W, PH01",
+      "city": "Toronto",
+      "province": "Ontario",
+      "postalCode": "M5S 2X9",
+      "coordinates": { "lat": 43.6708, "lng": -79.3958 }
+    },
+    "details": {
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "sqft": 2200,
+      "yearBuilt": 2021,
+      "parking": 2
+    },
+    "features": ["12ft Ceilings", "Private Terrace", "Custom Millwork", "Concierge", "Valet Parking", "Wine Cellar"],
+    "images": [
+      { "url": "/images/properties/condo3-1.jpg", "alt": "Luxury penthouse", "isPrimary": true },
+      { "url": "/images/properties/condo3-2.jpg", "alt": "Terrace view", "isPrimary": false }
+    ],
+    "agent": {
+      "name": "Niruban",
+      "phone": "(416) 555-0123",
+      "email": "niruban@realestate.com"
+    },
+    "createdAt": "2024-11-22T15:00:00Z",
+    "updatedAt": "2024-11-22T15:00:00Z"
+  },
+  {
+    "id": "9",
+    "title": "Renovated Townhouse in Vaughan",
+    "description": "Completely renovated 3-bedroom townhouse with modern finishes. New kitchen with stainless steel appliances, updated bathrooms, laminate flooring throughout. Convenient location near shopping, dining, and highway access.",
+    "price": 825000,
+    "type": "townhouse",
+    "status": "for-sale",
+    "location": {
+      "address": "678 Cedar Lane",
+      "city": "Vaughan",
+      "province": "Ontario",
+      "postalCode": "L4L 3T6",
+      "coordinates": { "lat": 43.7964, "lng": -79.5322 }
+    },
+    "details": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "sqft": 1550,
+      "yearBuilt": 2012,
+      "parking": 2
+    },
+    "features": ["Fully Renovated", "New Kitchen", "Updated Bathrooms", "Laminate Flooring", "Attached Garage"],
+    "images": [
+      { "url": "/images/properties/townhouse2-1.jpg", "alt": "Renovated townhouse", "isPrimary": true },
+      { "url": "/images/properties/townhouse2-2.jpg", "alt": "Modern kitchen", "isPrimary": false }
+    ],
+    "agent": {
+      "name": "Niruban",
+      "phone": "(416) 555-0123",
+      "email": "niruban@realestate.com"
+    },
+    "createdAt": "2024-12-03T08:00:00Z",
+    "updatedAt": "2024-12-03T08:00:00Z"
+  },
+  {
+    "id": "10",
+    "title": "Waterfront Condo in Port Credit",
+    "description": "Stunning 2-bedroom waterfront condo with unobstructed lake views. Open-concept layout, floor-to-ceiling windows, premium finishes. Building offers pool, gym, and direct access to waterfront trail and parks.",
+    "price": 950000,
+    "type": "condo",
+    "status": "for-sale",
+    "location": {
+      "address": "55 Lakeshore Road E, Unit 803",
+      "city": "Mississauga",
+      "province": "Ontario",
+      "postalCode": "L5G 1C9",
+      "coordinates": { "lat": 43.5547, "lng": -79.5845 }
+    },
+    "details": {
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "sqft": 1100,
+      "yearBuilt": 2019,
+      "parking": 1
+    },
+    "features": ["Waterfront", "Lake Views", "Open Concept", "Premium Finishes", "Pool", "Trail Access"],
+    "images": [
+      { "url": "/images/properties/condo4-1.jpg", "alt": "Waterfront view", "isPrimary": true },
+      { "url": "/images/properties/condo4-2.jpg", "alt": "Open living area", "isPrimary": false }
+    ],
+    "agent": {
+      "name": "Niruban",
+      "phone": "(416) 555-0123",
+      "email": "niruban@realestate.com"
+    },
+    "createdAt": "2024-11-29T12:00:00Z",
+    "updatedAt": "2024-11-29T12:00:00Z"
+  }
+]
