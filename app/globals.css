@@ -1,25 +1,35 @@
 @import "tailwindcss";
 
 :root {
+  /* Luxurious RE/MAX Theme */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a2e;
 
-  /* Sri Collective Group Brand Colors */
-  --brand-navy: #003087;
-  --brand-navy-dark: #002060;
-  --brand-navy-light: #0047AB;
-  --brand-red: #E11B22;
-  --brand-red-dark: #C8102E;
+  /* Brand Colors - Refined */
+  --navy: #0a1628;
+  --navy-light: #1a2d4d;
+  --navy-medium: #0d2847;
+  --blue-accent: #2563eb;
 
-  /* Dark Luxury Theme Colors */
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #171717;
-  --bg-tertiary: #262626;
+  --red: #dc2626;
+  --red-dark: #b91c1c;
+  --red-light: #ef4444;
 
-  /* Neutrals */
-  --text-primary: #fafafa;
-  --text-secondary: #a3a3a3;
-  --text-muted: #525252;
+  /* Elegant Neutrals */
+  --cream: #faf9f7;
+  --cream-dark: #f5f3f0;
+  --gray-warm: #78716c;
+  --gray-light: #e7e5e4;
+
+  /* Text Colors */
+  --text-primary: #1a1a2e;
+  --text-secondary: #57534e;
+  --text-muted: #a8a29e;
+  --text-light: #ffffff;
+
+  /* Borders */
+  --border-light: rgba(0, 0, 0, 0.06);
+  --border-navy: rgba(10, 22, 40, 0.1);
 
   /* States */
   --success: #10b981;
@@ -47,18 +57,200 @@ html {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--cream);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
+  background: var(--gray-warm);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--navy);
+}
+
+/* Selection colors */
+::selection {
+  background: rgba(220, 38, 38, 0.15);
+  color: var(--red-dark);
+}
+
+/* Navy gradient text */
+.text-gradient-navy {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Luxury card styling - Light theme */
+.luxury-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.luxury-card:hover {
+  border-color: rgba(220, 38, 38, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(220, 38, 38, 0.05);
+}
+
+/* Dark luxury card for navy sections */
+.luxury-card-dark {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.luxury-card-dark:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Hero overlay gradient */
+.hero-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(10, 22, 40, 0.92) 0%,
+    rgba(10, 22, 40, 0.75) 40%,
+    rgba(10, 22, 40, 0.4) 100%
+  );
+}
+
+/* Button styles */
+.btn-primary {
+  background: var(--red);
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  background: var(--red-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+}
+
+.btn-navy {
+  background: var(--navy);
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-navy:hover {
+  background: var(--navy-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(10, 22, 40, 0.25);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--navy);
+  color: white;
+}
+
+.btn-outline-light {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: white;
+  color: var(--navy);
+  border-color: white;
+}
+
+/* Info card on hero */
+.info-card {
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--gray-light) 20%,
+    var(--red) 50%,
+    var(--gray-light) 80%,
+    transparent 100%
+  );
+}
+
+.section-divider-light {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent 100%
+  );
+}
+
+/* Feature icon container */
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--cream);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.feature-icon:hover {
+  border-color: var(--red);
+  background: rgba(220, 38, 38, 0.05);
+}
+
+.feature-icon-dark {
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.feature-icon-dark:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Accent line */
+.accent-line {
+  width: 48px;
+  height: 3px;
+  background: var(--red);
+  border-radius: 2px;
 }
