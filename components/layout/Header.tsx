@@ -40,7 +40,7 @@ export default function Header() {
               href="/contact"
               className="bg-[#003087] text-white px-6 py-2 rounded-full hover:bg-[#002060] transition-colors"
             >
-              Get Started
+              Find Your Dream Home
             </Link>
           </div>
 
@@ -98,7 +98,7 @@ export default function Header() {
                 className="bg-[#003087] text-white px-6 py-2 rounded-full hover:bg-[#002060] transition-colors text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Get Started
+                Find Your Dream Home
               </Link>
             </div>
           </div>

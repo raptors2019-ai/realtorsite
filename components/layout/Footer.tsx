@@ -72,13 +72,27 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <p className="font-medium text-white">Sri Kathiravelu</p>
-                <p className="text-xs text-gray-400">@remaxsri</p>
+                <a
+                  href="https://www.instagram.com/remaxsri/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-gray-400 hover:text-red-400 transition-colors"
+                >
+                  📸 @remaxsri
+                </a>
               </li>
               <li>
                 <p className="font-medium text-white">Niru Arulselvan</p>
-                <p className="text-xs text-gray-400">@thesneakerrealtor_</p>
+                <a
+                  href="https://www.instagram.com/thesneakerrealtor_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-gray-400 hover:text-red-400 transition-colors block"
+                >
+                  📸 @thesneakerrealtor_
+                </a>
                 <a href="tel:+14167860431" className="text-xs hover:text-red-400 transition-colors block">
-                  +1 (416) 786-0431
+                  📱 +1 (416) 786-0431
                 </a>
               </li>
             </ul>
