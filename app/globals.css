@@ -4,15 +4,17 @@
   --background: #ffffff;
   --foreground: #171717;
 
+  /* Sri Collective Group Brand Colors */
+  --brand-navy: #003087;
+  --brand-navy-dark: #002060;
+  --brand-navy-light: #0047AB;
+  --brand-red: #E11B22;
+  --brand-red-dark: #C8102E;
+
   /* Dark Luxury Theme Colors */
   --bg-primary: #0a0a0a;
   --bg-secondary: #171717;
   --bg-tertiary: #262626;
-
-  /* Gold Accents */
-  --accent-gold: #d4af37;
-  --accent-gold-light: #f4d47e;
-  --accent-gold-dark: #b8941f;
 
   /* Neutrals */
   --text-primary: #fafafa;

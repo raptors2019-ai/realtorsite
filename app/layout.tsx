@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Niruban Realtor - Find Your Dream Home in GTA",
-  description: "Your trusted partner in finding the perfect home. Browse properties, connect with expert realtors, and find your dream home in the Greater Toronto Area.",
+  title: "Sri Collective Group - Redefining Real Estate in Ontario",
+  description: "Redefining real estate, one home at a time. Meet our expert team - Sri Kathiravelu and Niru Arulselvan. RE/MAX & Experts Brokerage serving Ontario, Canada.",
 };
 
 export default function RootLayout({

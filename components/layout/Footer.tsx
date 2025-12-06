@@ -9,11 +9,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-white text-2xl font-bold mb-4">
-              Niruban<span className="text-blue-500">.</span>
+            <h3 className="text-white text-xl font-bold mb-4">
+              <span className="text-white">SRI</span>
+              <span className="text-red-500"> COLLECTIVE GROUP</span>
             </h3>
-            <p className="text-sm text-gray-400">
-              Your trusted partner in finding the perfect home in the Greater Toronto Area.
+            <p className="text-sm text-gray-400 mb-3">
+              Redefining real estate, one home at a time
+            </p>
+            <p className="text-xs text-gray-500">
+              RE/MAX & Experts Brokerage<br />
+              Ontario, Canada 🇨🇦
             </p>
           </div>
 
@@ -63,20 +68,18 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="text-white font-semibold mb-4">Meet Our Team</h4>
+            <ul className="space-y-3 text-sm">
               <li>
-                <a href="tel:+1234567890" className="hover:text-blue-400 transition-colors">
-                  (123) 456-7890
-                </a>
+                <p className="font-medium text-white">Sri Kathiravelu</p>
+                <p className="text-xs text-gray-400">@remaxsri</p>
               </li>
               <li>
-                <a href="mailto:info@niruban.com" className="hover:text-blue-400 transition-colors">
-                  info@niruban.com
+                <p className="font-medium text-white">Niru Arulselvan</p>
+                <p className="text-xs text-gray-400">@thesneakerrealtor_</p>
+                <a href="tel:+14167860431" className="text-xs hover:text-red-400 transition-colors block">
+                  +1 (416) 786-0431
                 </a>
-              </li>
-              <li className="text-gray-400">
-                Greater Toronto Area, ON
               </li>
             </ul>
           </div>
@@ -84,7 +87,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-center text-gray-400">
-          <p>&copy; {currentYear} Niruban Realtor. All rights reserved.</p>
+          <p>&copy; {currentYear} Sri Collective Group. All rights reserved.</p>
         </div>
       </div>
     </footer>

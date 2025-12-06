@@ -1,14 +1,15 @@
-# Niruban Realtor Website - MVP
+# Sri Collective Group - Real Estate Website
 
-> Modern, eye-catching realtor website with interactive chatbot and property showcase
-> **Launch Date:** December 12, 2024
+> Redefining real estate, one home at a time
+> **Team:** Sri Kathiravelu (@remaxsri) & Niru Arulselvan (@thesneakerrealtor_)
+> **Brokerage:** RE/MAX & Experts Brokerage | Ontario, Canada 🇨🇦
 > **Tech Stack:** Next.js 16.0.7, React 19, TypeScript, Tailwind CSS v4
 
 ---
 
 ## 🎯 Project Overview
 
-Building a standout realtor website for Niruban that differentiates from typical real estate sites through:
+Building a standout realtor website for Sri Collective Group that differentiates from typical real estate sites through:
 - **Interactive Chatbot** - Conversational dream home search experience
 - **Beautiful Property Showcase** - Dark luxury aesthetic with smooth animations
 - **Live Data Integration** - Realtor.ca listings and HouseSigma sold data
@@ -45,11 +46,14 @@ Building a standout realtor website for Niruban that differentiates from typical
 - Integration with chatbot collected data
 - Success confirmations and error handling
 
-#### 4. Realtor.ca Integration
-- Live listings from realtor.ca
+#### 4. Data Integration Strategy
+- **MVP Approach:** Curated mock data (10-20 properties)
+- **Phase 2 Options:**
+  - **Option A (Preferred):** IDX/MLS feed if Niruban has brokerage access
+  - **Option B:** Scraping realtor.ca (after legal review & Niruban approval)
+  - **Hybrid:** Manual builder projects + automated market listings
 - Location-based search (GTA/Mississauga focus)
 - Property type and price filtering
-- Fallback to curated mock data
 
 #### 5. HouseSigma Data (Nice-to-have)
 - Recent sold properties for market insights
@@ -488,50 +492,106 @@ interface Property {
 }
 ```
 
-### Data Sources (MVP)
+### Data Sources Strategy
 
-**Current:** Mock JSON data (20-30 realistic properties)
-**Future:**
-- Realtor.ca live listings (scraping or API)
-- HouseSigma sold data
-- Database with Supabase
+> **Note:** Analysis of luxshan.ca (reference site) shows they use **WordPress + MyListing plugin** with manual data entry - NOT automated MLS/IDX. This means they manually update properties, which doesn't scale well. We're building a better system with automation options.
+
+**MVP (Dec 12th):**
+- Mock JSON data (15-20 realistic GTA properties)
+- Manually curated builder projects
+- High-quality sample data to demonstrate functionality
+
+**Phase 2 Options (Priority order):**
+
+**Option 1: IDX/MLS Feed (RECOMMENDED if available)**
+- ✅ Legal and official
+- ✅ Auto-updates daily
+- ✅ Complete property data
+- ✅ MLS compliance built-in
+- ❗ Requires: Realtor license + brokerage membership
+- ❗ Cost: $50-200/month typically
+- **Action:** Confirm with Niruban on Dec 12th if he has access
+
+**Option 2: Realtor.ca Scraping (if no IDX access)**
+- ⚠️ Legal gray area - requires review
+- ✅ Free (besides infrastructure)
+- ✅ Can get most GTA listings
+- ❗ Requires: Niruban's explicit approval
+- ❗ Risk: Terms of Service violations
+- **Action:** Only proceed after legal review + approval
+
+**Option 3: Hybrid Approach (BEST of both)**
+- Manual CMS for Niruban's builder projects (10-20 properties)
+- Automated IDX/scraping for market listings (100s of properties)
+- Featured section for exclusive deals
+- **Action:** Likely implementation regardless of data source
+
+**HouseSigma Sold Data:**
+- Public sold data for market insights
+- Scraping acceptable (publicly available)
+- Phase 2 or 3 priority
 
 ---
 
 ## 🎯 Questions for Niruban (Dec 12th Meeting)
 
-### Critical Decisions
+> **Full detailed question list:** See [/QuestionsToAsk.md](../QuestionsToAsk.md)
 
-1. **Content Management**
-   - How do you want to add/manage builder projects?
-   - Admin dashboard or CMS preference?
+### 🔴 Critical Decisions (Must Answer)
 
-2. **Notification System Priority**
-   - Required for MVP or Phase 2 feature?
-   - Email service preference?
-   - How often to check for matches (daily/hourly)?
+**1. IDX/MLS Access (MOST IMPORTANT)**
+- Do you have IDX/MLS feed access through your brokerage?
+  - Which MLS board? (TRREB, CREA, etc.)
+  - Monthly cost?
+  - Display restrictions?
+- **Decision Impact:** Determines entire data strategy
 
-3. **Data Sources**
-   - Realtor.ca: Scraping acceptable or need official API?
-   - HouseSigma: Public sold data OK?
-   - Budget for third-party APIs?
+**2. Scraping Approval (if no IDX/MLS)**
+- Are you comfortable with scraping realtor.ca?
+- Understand legal considerations?
+- Want legal review first?
+- **Decision Impact:** Legal liability and data source
 
-4. **Target Audience**
-   - First-time buyers, luxury market, investors, families?
+**3. Notification System Priority**
+- Required for MVP (tight timeline) or Phase 2?
+- **Decision Impact:** Database + auth needed in 7 days if MVP
 
-5. **Unique Selling Point**
-   - What makes your service different from other realtors?
+**4. Property Management**
+- How many builder projects to feature? (5-10? 20+? 50+?)
+- How often do they change? (Weekly? Monthly?)
+- Want admin panel or send us updates?
+- **Decision Impact:** CMS complexity and automation level
 
-6. **Builder Projects Focus**
-   - Pre-construction/new developments only?
-   - Or include resale listings too?
+**5. Target Audience & USP**
+- First-time buyers? Luxury? Pre-construction specialists?
+- Geographic focus? (GTA-wide? Specific cities?)
+- What makes you different from other realtors?
+- **Decision Impact:** Chatbot flow and messaging
 
-### Nice to Know
+**6. Contact Preferences**
+- Rank: Email, Phone, SMS, WhatsApp?
+- Business hours? (9-5? 24/7?)
+- Lead capture forms vs. direct contact?
+- **Decision Impact:** Contact system design
 
-- Brand colors/logo preferences?
+### 🟡 Important (Should Answer)
+
+- Existing branding? (Logo, colors, style guide?)
 - Domain name ready?
-- Social media accounts to link?
-- Preferred contact hours for chat?
+- Budget for ongoing costs? ($0-100/mo range)
+- Phase 2 timeline? (Immediate or wait 1-2 months?)
+- HouseSigma sold data priority?
+- Map integration priority?
+
+### 🟢 Nice to Know
+
+- Social media accounts?
+- Preferred design aesthetic?
+- Mortgage calculator needed?
+- Virtual tour integration?
+- SEO/marketing plans?
+
+**See [QuestionsToAsk.md](../QuestionsToAsk.md) for complete question list with context and decision matrix.**
 
 ---
 
@@ -589,21 +649,42 @@ interface Property {
 
 ### Phase 3: Data Integration (Week 3-4)
 
-**Realtor.ca Integration**
-- Web scraping (Puppeteer) or third-party API
-- Cache listings in database
-- Real-time updates
+**Step 1: Clarify Data Source (Dec 12th Meeting)**
+- Confirm if Niruban has IDX/MLS access
+- Get approval for scraping if needed
+- Decide on hybrid vs. single source approach
 
-**HouseSigma Sold Data**
-- Scrape recent sold properties
+**Step 2: IDX/MLS Integration (if available)**
+- Connect to IDX feed via brokerage API
+- Set up daily sync to Supabase
+- Implement MLS display rules
+- Cache listings for performance
+- **Timeline:** 3-5 days
+- **Cost:** $50-200/mo (via brokerage)
+
+**Step 3: Realtor.ca Scraping (if no IDX)**
+- ⚠️ Legal review of realtor.ca Terms of Service
+- Get explicit written approval from Niruban
+- Build scraper with Puppeteer/Playwright
+- Implement rate limiting and respectful crawling
+- Cache listings in database
+- Daily updates (off-peak hours)
+- **Timeline:** 5-7 days
+- **Risk:** Potential ToS violations
+
+**Step 4: HouseSigma Sold Data**
+- Scrape recent sold properties (public data)
 - Market trends and insights
 - Comparative market analysis
 - Investment analysis tools
+- **Timeline:** 2-3 days
 
-**Admin Panel**
-- Niruban can manage listings
-- Upload new builder projects
-- Featured property management
+**Step 5: Admin Panel for Niruban**
+- CRUD interface for builder projects
+- Upload/manage exclusive listings
+- Set featured properties
+- Update property status
+- **Timeline:** 3-4 days
 
 ### Phase 4: Advanced Features (Week 5-6)
 
@@ -715,7 +796,9 @@ vercel --prod
 **Developer:** Josh
 **Project Start:** December 5, 2024
 **Launch:** December 12, 2024
-**Client:** Niruban (Realtor)
+**Client:** Sri Collective Group
+**Team:** Sri Kathiravelu & Niru Arulselvan
+**Contact:** +1 (416) 786-0431
 
 ---
 

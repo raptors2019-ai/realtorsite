@@ -12,32 +12,33 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-gray-900">
-            Niruban<span className="text-blue-600">.</span>
+            <span className="text-[#003087]">SRI</span>
+            <span className="text-red-600"> COLLECTIVE GROUP</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-gray-700 hover:text-[#003087] transition-colors"
             >
               Home
             </Link>
             <Link
               href="/properties"
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-gray-700 hover:text-[#003087] transition-colors"
             >
               Properties
             </Link>
             <Link
               href="/contact"
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className="text-gray-700 hover:text-[#003087] transition-colors"
             >
               Contact
             </Link>
             <Link
               href="/contact"
-              className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors"
+              className="bg-[#003087] text-white px-6 py-2 rounded-full hover:bg-[#002060] transition-colors"
             >
               Get Started
             </Link>
@@ -73,28 +74,28 @@ export default function Header() {
             <div className="flex flex-col space-y-4">
               <Link
                 href="/"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-gray-700 hover:text-[#003087] transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/properties"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-gray-700 hover:text-[#003087] transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Properties
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-gray-700 hover:text-[#003087] transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </Link>
               <Link
                 href="/contact"
-                className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors text-center"
+                className="bg-[#003087] text-white px-6 py-2 rounded-full hover:bg-[#002060] transition-colors text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get Started
