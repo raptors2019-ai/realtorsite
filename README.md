@@ -114,7 +114,8 @@ Building a standout realtor website for Sri Collective Group that differentiates
 - [x] Typing indicator animation
 - [x] Zustand store setup (`store/chatbot-store.ts`)
 - [x] OpenAI GPT-4o-mini integration (`app/api/chat/route.ts`)
-- [x] Quick action buttons (Contact Us, Dream Home, How can you help)
+- [x] Quick action buttons (Contact Us, Tell us about your dream home)
+- [x] Interactive dream home survey (property type, budget, bedrooms, locations)
 
 ### Day 4: Chatbot Intelligence (Dec 8-9)
 - [ ] Complete all conversation flows
