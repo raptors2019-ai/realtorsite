@@ -32,21 +32,24 @@ export default function Header() {
 
   return (
     <header
-      className={`bg-white/95 backdrop-blur-md border-b sticky top-0 z-50 transition-all duration-300 ${
+      className={`bg-white/98 backdrop-blur-xl border-b sticky top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-black/10 shadow-lg shadow-black/5"
+          ? "border-[#c9a962]/20 shadow-lg shadow-black/5"
           : "border-black/5"
       }`}
     >
+      {/* Premium gold accent line at top */}
+      <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#c9a962] to-transparent transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'opacity-0'}`} />
+
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-2xl font-semibold tracking-tight transition-transform duration-300 group-hover:scale-105">
-              <span className="text-[#0a1628] transition-colors duration-300 group-hover:text-[#0a1628]">
+            <span className="text-2xl font-semibold tracking-tight transition-all duration-300 group-hover:scale-[1.02]">
+              <span className="text-[#0a1628] transition-colors duration-300">
                 Sri
               </span>
-              <span className="text-[#dc2626] transition-colors duration-300 group-hover:text-[#b91c1c]">
+              <span className="text-gradient-gold transition-colors duration-300">
                 {" "}
                 Collective
               </span>
@@ -64,30 +67,31 @@ export default function Header() {
                 <span
                   className={`relative z-10 transition-colors duration-300 ${
                     isActive(link.href)
-                      ? "text-[#dc2626]"
+                      ? "text-[#c9a962]"
                       : "text-[#57534e] group-hover:text-[#0a1628]"
                   }`}
                 >
                   {link.label}
                 </span>
-                {/* Underline animation */}
+                {/* Underline animation - gold */}
                 <span
-                  className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#dc2626] transition-all duration-300 ease-out ${
+                  className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-[#c9a962] to-[#d4b978] transition-all duration-300 ease-out ${
                     isActive(link.href)
                       ? "w-6"
                       : "w-0 group-hover:w-6"
                   }`}
                 />
                 {/* Background hover effect */}
-                <span className="absolute inset-0 rounded-lg bg-[#faf9f7] scale-0 group-hover:scale-100 transition-transform duration-300 ease-out -z-10" />
+                <span className="absolute inset-0 rounded-lg bg-gradient-to-br from-[#faf9f7] to-[#f5f3f0] scale-0 group-hover:scale-100 transition-transform duration-300 ease-out -z-10" />
               </Link>
             ))}
             <Link
               href="/contact"
-              className="relative ml-4 px-6 py-2.5 rounded-lg text-sm font-medium text-white bg-[#dc2626] overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-red-500/25 hover:-translate-y-0.5"
+              className="relative ml-4 px-6 py-2.5 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-[#0a1628] to-[#1a2d4d] overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-navy/25 hover:-translate-y-0.5"
             >
               <span className="relative z-10">Get Started</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#dc2626] to-[#b91c1c] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              {/* Gold shimmer on hover */}
+              <span className="absolute inset-0 bg-gradient-to-r from-[#1a2d4d] via-[#c9a962]/20 to-[#0a1628] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </Link>
           </div>
 
@@ -123,7 +127,7 @@ export default function Header() {
             mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="pt-4 pb-2 border-t border-black/5 mt-4">
+          <div className="pt-4 pb-2 border-t border-[#c9a962]/20 mt-4">
             <div className="flex flex-col space-y-1">
               {navLinks.map((link, index) => (
                 <Link
@@ -131,7 +135,7 @@ export default function Header() {
                   href={link.href}
                   className={`px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                     isActive(link.href)
-                      ? "text-[#dc2626] bg-red-50"
+                      ? "text-[#c9a962] bg-[#c9a962]/5"
                       : "text-[#57534e] hover:text-[#0a1628] hover:bg-[#faf9f7]"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
@@ -144,7 +148,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="mx-4 mt-2 px-5 py-3 rounded-lg text-sm font-medium text-center text-white bg-[#dc2626] hover:bg-[#b91c1c] transition-all duration-300"
+                className="mx-4 mt-2 px-5 py-3 rounded-lg text-sm font-medium text-center text-white bg-gradient-to-r from-[#0a1628] to-[#1a2d4d] hover:shadow-lg transition-all duration-300"
                 onClick={() => setMobileMenuOpen(false)}
                 style={{
                   transitionDelay: mobileMenuOpen

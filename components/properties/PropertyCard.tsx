@@ -21,20 +21,20 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
     <Link
       href={`/properties/${property.id}`}
       className={cn(
-        "group block luxury-card rounded-xl overflow-hidden transition-all duration-300",
+        "group block luxury-card-premium rounded-xl overflow-hidden transition-all duration-500",
         className
       )}
     >
       {/* Image */}
-      <div className="relative h-56 bg-[#faf9f7] overflow-hidden">
+      <div className="relative h-60 bg-gradient-to-br from-[#faf9f7] to-[#f5f3f0] overflow-hidden">
         {primaryImage && (
           <Image
             src={primaryImage.url}
             alt={primaryImage.alt}
             fill
             className={cn(
-              "object-cover transition-all duration-500",
-              "group-hover:scale-105",
+              "object-cover transition-all duration-700 ease-out",
+              "group-hover:scale-110",
               imageLoaded ? "opacity-100" : "opacity-0"
             )}
             onLoad={() => setImageLoaded(true)}
@@ -42,52 +42,59 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
           />
         )}
 
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        {/* Premium gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/70 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
 
         {/* Status Badge */}
         {property.status === "for-sale" && (
-          <div className="absolute top-3 left-3 bg-[#dc2626] text-white px-3 py-1 rounded text-xs font-medium uppercase tracking-wider">
+          <div className="absolute top-4 left-4 badge-sale">
             For Sale
           </div>
         )}
 
         {/* Featured Badge */}
         {property.featured && (
-          <div className="absolute top-3 right-3 bg-[#0a1628] text-white px-3 py-1 rounded text-xs font-medium uppercase tracking-wider">
-            Featured
+          <div className="absolute top-4 right-4 badge-premium">
+            Premium
           </div>
         )}
 
         {/* Scarcity Message */}
         {property.remainingUnits && property.remainingUnits <= 5 && (
-          <div className="absolute bottom-3 left-3 bg-[#dc2626] text-white px-3 py-1 rounded text-xs font-medium">
-            Only {property.remainingUnits} remaining!
+          <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm text-[#dc2626] px-3 py-1.5 rounded-lg text-xs font-semibold shadow-lg">
+            Only {property.remainingUnits} remaining
           </div>
         )}
+
+        {/* View Details overlay on hover */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span className="bg-white/95 backdrop-blur-sm text-[#0a1628] px-5 py-2.5 rounded-lg text-sm font-medium shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            View Details
+          </span>
+        </div>
       </div>
 
       {/* Content */}
-      <div className="p-5">
-        {/* Price */}
-        <div className="flex items-baseline justify-between mb-2">
-          <h3 className="text-xl font-bold text-[#dc2626]">
+      <div className="p-6">
+        {/* Price and Type */}
+        <div className="flex items-baseline justify-between mb-3">
+          <h3 className="text-2xl font-bold text-gradient-gold">
             {formatPrice(property.price)}
           </h3>
-          <span className="text-xs text-[#a8a29e] capitalize uppercase tracking-wider">
+          <span className="text-xs text-[#c9a962] capitalize uppercase tracking-wider font-medium">
             {property.type}
           </span>
         </div>
 
         {/* Title */}
-        <h4 className="text-base font-semibold text-[#0a1628] mb-2 line-clamp-2 group-hover:text-[#dc2626] transition-colors">
+        <h4 className="text-lg font-semibold text-[#0a1628] mb-2 line-clamp-2 group-hover:text-[#c9a962] transition-colors duration-300">
           {property.title}
         </h4>
 
         {/* Location */}
-        <p className="text-[#57534e] text-sm mb-4 flex items-center gap-1.5">
+        <p className="text-[#57534e] text-sm mb-5 flex items-center gap-2">
           <svg
-            className="w-4 h-4 flex-shrink-0 text-[#a8a29e]"
+            className="w-4 h-4 flex-shrink-0 text-[#c9a962]"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -104,53 +111,59 @@ export default function PropertyCard({ property, className }: PropertyCardProps)
         </p>
 
         {/* Property Details */}
-        <div className="flex items-center gap-4 text-sm text-[#57534e] border-t border-[#e7e5e4] pt-4">
+        <div className="flex items-center gap-5 text-sm text-[#57534e] border-t border-[#c9a962]/20 pt-5">
           {/* Bedrooms */}
-          <div className="flex items-center gap-1.5">
-            <svg
-              className="w-4 h-4 text-[#a8a29e]"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1.5"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-            </svg>
-            <span>{property.details.bedrooms} bed</span>
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-lg bg-[#faf9f7] flex items-center justify-center">
+              <svg
+                className="w-4 h-4 text-[#c9a962]"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <span className="font-medium">{property.details.bedrooms} bed</span>
           </div>
 
           {/* Bathrooms */}
-          <div className="flex items-center gap-1.5">
-            <svg
-              className="w-4 h-4 text-[#a8a29e]"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1.5"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-            </svg>
-            <span>{property.details.bathrooms} bath</span>
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-lg bg-[#faf9f7] flex items-center justify-center">
+              <svg
+                className="w-4 h-4 text-[#c9a962]"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <span className="font-medium">{property.details.bathrooms} bath</span>
           </div>
 
           {/* Square Feet */}
-          <div className="flex items-center gap-1.5">
-            <svg
-              className="w-4 h-4 text-[#a8a29e]"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1.5"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-            </svg>
-            <span>{property.details.sqft.toLocaleString()} sqft</span>
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-lg bg-[#faf9f7] flex items-center justify-center">
+              <svg
+                className="w-4 h-4 text-[#c9a962]"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+              </svg>
+            </div>
+            <span className="font-medium">{property.details.sqft.toLocaleString()} sqft</span>
           </div>
         </div>
       </div>

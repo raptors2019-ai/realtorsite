@@ -12,7 +12,7 @@ export default function Home() {
       <section className="relative h-[90vh] min-h-[700px] overflow-hidden">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 animate-[pulse_20s_ease-in-out_infinite]"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&h=1080&fit=crop')",
@@ -25,30 +25,30 @@ export default function Home() {
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl">
             <div className="accent-line mb-6" />
-            <p className="text-white/70 uppercase tracking-[0.2em] text-sm mb-4 font-medium">
+            <p className="text-[#c9a962] uppercase tracking-[0.25em] text-sm mb-4 font-medium">
               New Builder Projects
             </p>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               The Pickering
               <br />
-              <span className="font-light italic">Station</span>
+              <span className="font-light italic text-gradient-gold">Station</span>
               <br />
               Collection
             </h1>
-            <p className="text-white/70 text-lg mb-8 max-w-md">
+            <p className="text-white/70 text-lg mb-8 max-w-md leading-relaxed">
               Exclusive pre-construction townhomes and detached homes in prime
               Pickering location. Starting from $999,000.
             </p>
             <div className="flex gap-4">
               <Link
                 href="/builder-projects"
-                className="btn-primary px-8 py-3 rounded-lg text-sm font-medium"
+                className="btn-gold px-8 py-3.5 rounded-lg text-sm font-medium"
               >
                 View Projects
               </Link>
               <Link
                 href="/contact"
-                className="btn-outline-light px-8 py-3 rounded-lg text-sm"
+                className="btn-outline-light px-8 py-3.5 rounded-lg text-sm"
               >
                 Contact Us
               </Link>
@@ -57,7 +57,8 @@ export default function Home() {
 
           {/* Featured Property Info Card */}
           <div className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 info-card p-6 rounded-xl max-w-xs">
-            <div className="space-y-4">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#c9a962] via-[#d4b978] to-[#c9a962] rounded-t-xl" />
+            <div className="space-y-4 pt-2">
               <div className="flex justify-between items-center">
                 <span className="text-[#57534e] text-sm">Status:</span>
                 <span className="text-[#0a1628] font-medium">Pre-Construction</span>
@@ -70,7 +71,7 @@ export default function Home() {
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-[#57534e] text-sm">Starting Price:</span>
-                <span className="text-[#dc2626] font-semibold">$999,000</span>
+                <span className="text-[#c9a962] font-bold text-lg">$999,000</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-[#57534e] text-sm">Closing:</span>
@@ -88,12 +89,15 @@ export default function Home() {
       </section>
 
       {/* The Sri Collective Advantage Section */}
-      <section className="py-24 bg-[#faf9f7]">
+      <section className="py-28 bg-gradient-to-b from-[#faf9f7] to-white relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-[#c9a962]/30 to-transparent" />
+
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="accent-line mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a1628] mb-4">
-              The Sri Collective <span className="text-[#dc2626]">Advantage</span>
+              The Sri Collective <span className="text-gradient-gold">Advantage</span>
             </h2>
             <p className="text-[#57534e] max-w-2xl mx-auto">
               We bring expertise, exclusive access, and a client-first approach
@@ -103,10 +107,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Feature 1 */}
-            <div className="luxury-card rounded-xl p-8 text-center group">
-              <div className="feature-icon mx-auto mb-6">
+            <div className="luxury-card-premium rounded-xl p-8 text-center group">
+              <div className="feature-icon mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg
-                  className="w-7 h-7 text-[#dc2626]"
+                  className="w-7 h-7 text-[#c9a962]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -119,7 +123,7 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-[#0a1628] mb-3">
+              <h3 className="text-lg font-semibold text-[#0a1628] mb-3 group-hover:text-[#c9a962] transition-colors">
                 Exclusive Builder Access
               </h3>
               <p className="text-[#57534e] text-sm leading-relaxed">
@@ -130,10 +134,10 @@ export default function Home() {
             </div>
 
             {/* Feature 2 */}
-            <div className="luxury-card rounded-xl p-8 text-center group">
-              <div className="feature-icon mx-auto mb-6">
+            <div className="luxury-card-premium rounded-xl p-8 text-center group">
+              <div className="feature-icon mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg
-                  className="w-7 h-7 text-[#dc2626]"
+                  className="w-7 h-7 text-[#c9a962]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -146,7 +150,7 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-[#0a1628] mb-3">
+              <h3 className="text-lg font-semibold text-[#0a1628] mb-3 group-hover:text-[#c9a962] transition-colors">
                 Pre-Construction Expertise
               </h3>
               <p className="text-[#57534e] text-sm leading-relaxed">
@@ -157,10 +161,10 @@ export default function Home() {
             </div>
 
             {/* Feature 3 */}
-            <div className="luxury-card rounded-xl p-8 text-center group">
-              <div className="feature-icon mx-auto mb-6">
+            <div className="luxury-card-premium rounded-xl p-8 text-center group">
+              <div className="feature-icon mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg
-                  className="w-7 h-7 text-[#dc2626]"
+                  className="w-7 h-7 text-[#c9a962]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -173,7 +177,7 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-[#0a1628] mb-3">
+              <h3 className="text-lg font-semibold text-[#0a1628] mb-3 group-hover:text-[#c9a962] transition-colors">
                 Digital-First Experience
               </h3>
               <p className="text-[#57534e] text-sm leading-relaxed">
@@ -187,10 +191,10 @@ export default function Home() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-24 bg-white">
+      <section className="py-28 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-[#dc2626] uppercase tracking-[0.2em] text-sm mb-3 font-medium">
+            <p className="text-[#c9a962] uppercase tracking-[0.25em] text-sm mb-3 font-medium">
               Featured
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a1628]">
@@ -202,32 +206,32 @@ export default function Home() {
             {/* Project Card 1 */}
             <Link
               href="/builder-projects"
-              className="luxury-card rounded-xl overflow-hidden group cursor-pointer"
+              className="luxury-card-premium rounded-xl overflow-hidden group cursor-pointer"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-72 overflow-hidden">
                 <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{
                     backgroundImage:
                       "url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop')",
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 via-[#0a1628]/30 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-[#dc2626] text-white text-xs px-3 py-1.5 rounded font-medium">
+                  <span className="badge-sale">
                     Pre-Construction
                   </span>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#0a1628] mb-2 group-hover:text-[#dc2626] transition-colors">
+                <h3 className="text-xl font-semibold text-[#0a1628] mb-2 group-hover:text-[#c9a962] transition-colors">
                   The Pickering Station Collection
                 </h3>
                 <p className="text-[#57534e] text-sm mb-4">
                   Luxury townhomes and detached homes in Pickering
                 </p>
                 <div className="flex justify-between items-center">
-                  <span className="text-[#dc2626] font-semibold">
+                  <span className="text-[#c9a962] font-bold text-lg">
                     From $999,000
                   </span>
                   <span className="text-[#a8a29e] text-sm">Q4 2026</span>
@@ -238,32 +242,32 @@ export default function Home() {
             {/* Project Card 2 */}
             <Link
               href="/builder-projects"
-              className="luxury-card rounded-xl overflow-hidden group cursor-pointer"
+              className="luxury-card-premium rounded-xl overflow-hidden group cursor-pointer"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-72 overflow-hidden">
                 <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{
                     backgroundImage:
                       "url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop')",
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 via-[#0a1628]/30 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-[#0a1628] text-white text-xs px-3 py-1.5 rounded font-medium">
+                  <span className="badge-featured">
                     Coming Soon
                   </span>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#0a1628] mb-2 group-hover:text-[#dc2626] transition-colors">
+                <h3 className="text-xl font-semibold text-[#0a1628] mb-2 group-hover:text-[#c9a962] transition-colors">
                   Oakville Waterfront Residences
                 </h3>
                 <p className="text-[#57534e] text-sm mb-4">
                   Premium lakefront condominiums in South Oakville
                 </p>
                 <div className="flex justify-between items-center">
-                  <span className="text-[#dc2626] font-semibold">
+                  <span className="text-[#c9a962] font-bold text-lg">
                     From $1,200,000
                   </span>
                   <span className="text-[#a8a29e] text-sm">Q2 2027</span>
@@ -275,7 +279,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/builder-projects"
-              className="btn-outline px-8 py-3 rounded-lg text-sm inline-block"
+              className="btn-outline px-8 py-3.5 rounded-lg text-sm inline-block"
             >
               View All Projects
             </Link>
@@ -284,10 +288,10 @@ export default function Home() {
       </section>
 
       {/* Featured Properties Section */}
-      <section className="py-24 bg-[#faf9f7]">
+      <section className="py-28 bg-gradient-to-b from-[#faf9f7] to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-[#dc2626] uppercase tracking-[0.2em] text-sm mb-3 font-medium">
+            <p className="text-[#c9a962] uppercase tracking-[0.25em] text-sm mb-3 font-medium">
               Explore
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a1628]">
@@ -295,7 +299,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {featuredProperties.map((property) => (
               <PropertyCard key={property.id} property={property} />
             ))}
@@ -304,7 +308,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/properties"
-              className="btn-outline px-8 py-3 rounded-lg text-sm inline-block"
+              className="btn-outline px-8 py-3.5 rounded-lg text-sm inline-block"
             >
               View All Properties
             </Link>
@@ -313,7 +317,7 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section className="py-24 bg-white">
+      <section className="py-28 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -341,7 +345,7 @@ export default function Home() {
                 <div className="flex gap-4 pt-4">
                   <Link
                     href="/contact"
-                    className="btn-primary px-6 py-3 rounded-lg text-sm font-medium"
+                    className="btn-gold px-6 py-3 rounded-lg text-sm font-medium"
                   >
                     Get in Touch
                   </Link>
@@ -354,40 +358,48 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="luxury-card rounded-xl p-8">
+              <div className="luxury-card-premium rounded-xl p-8">
                 <h3 className="text-xl font-semibold text-[#0a1628] mb-6">Why Choose Us</h3>
                 <div className="space-y-5">
-                  <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-[#dc2626] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-[#c9a962]/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-[#c9a962]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
                     <div>
                       <h4 className="text-[#0a1628] font-medium mb-1">Direct Builder Access</h4>
                       <p className="text-[#57534e] text-sm">Exclusive pre-construction deals before public release</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-[#dc2626] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-[#c9a962]/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-[#c9a962]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
                     <div>
                       <h4 className="text-[#0a1628] font-medium mb-1">Market Expertise</h4>
                       <p className="text-[#57534e] text-sm">Deep knowledge of GTA markets and investment opportunities</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-[#dc2626] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-[#c9a962]/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-[#c9a962]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
                     <div>
                       <h4 className="text-[#0a1628] font-medium mb-1">White-Glove Service</h4>
                       <p className="text-[#57534e] text-sm">Personalized support from search to closing and beyond</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-[#dc2626] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-[#c9a962]/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-[#c9a962]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
                     <div>
                       <h4 className="text-[#0a1628] font-medium mb-1">Digital Innovation</h4>
                       <p className="text-[#57534e] text-sm">Modern tools and 24/7 online access to your search</p>
@@ -400,16 +412,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section - Navy */}
-      <section className="py-24 bg-[#0a1628]">
-        <div className="container mx-auto px-4">
+      {/* Contact Section - Navy with gold accents */}
+      <section className="py-28 bg-gradient-to-b from-[#0a1628] to-[#050b14] relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#c9a962]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#c9a962]/3 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+
+        <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <div className="section-divider-light w-24 mx-auto mb-6" />
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Let&apos;s Work <span className="text-[#dc2626]">Together</span>
+                Let&apos;s Work <span className="text-gradient-gold">Together</span>
               </h2>
-              <p className="text-white/70 max-w-2xl mx-auto">
+              <p className="text-white/60 max-w-2xl mx-auto">
                 Whether you&apos;re looking for pre-construction opportunities or resale properties,
                 we&apos;re here to guide you every step of the way.
               </p>
@@ -417,40 +433,40 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-6">
               {/* Contact Card 1 */}
-              <div className="luxury-card-dark rounded-xl p-6 text-center">
+              <div className="luxury-card-dark rounded-xl p-6 text-center group">
                 <div className="feature-icon-dark mx-auto mb-4">
-                  <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <svg className="w-7 h-7 text-[#c9a962]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                   </svg>
                 </div>
                 <h3 className="text-white font-medium mb-2">Phone</h3>
-                <a href="tel:+14167860431" className="text-white/70 hover:text-white transition-colors">
+                <a href="tel:+14167860431" className="text-[#c9a962] hover:text-[#d4b978] transition-colors">
                   +1 (416) 786-0431
                 </a>
               </div>
 
               {/* Contact Card 2 */}
-              <div className="luxury-card-dark rounded-xl p-6 text-center">
+              <div className="luxury-card-dark rounded-xl p-6 text-center group">
                 <div className="feature-icon-dark mx-auto mb-4">
-                  <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <svg className="w-7 h-7 text-[#c9a962]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                   </svg>
                 </div>
                 <h3 className="text-white font-medium mb-2">Email</h3>
-                <a href="mailto:info@sricollectivegroup.com" className="text-white/70 hover:text-white transition-colors break-all text-sm">
+                <a href="mailto:info@sricollectivegroup.com" className="text-[#c9a962] hover:text-[#d4b978] transition-colors break-all text-sm">
                   info@sricollectivegroup.com
                 </a>
               </div>
 
               {/* Contact Card 3 */}
-              <div className="luxury-card-dark rounded-xl p-6 text-center">
+              <div className="luxury-card-dark rounded-xl p-6 text-center group">
                 <div className="feature-icon-dark mx-auto mb-4">
-                  <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <svg className="w-7 h-7 text-[#c9a962]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
                   </svg>
                 </div>
                 <h3 className="text-white font-medium mb-2">Schedule</h3>
-                <Link href="/contact" className="text-white/70 hover:text-white transition-colors">
+                <Link href="/contact" className="text-[#c9a962] hover:text-[#d4b978] transition-colors">
                   Book Consultation
                 </Link>
               </div>
@@ -459,7 +475,7 @@ export default function Home() {
             <div className="text-center mt-12">
               <Link
                 href="/contact"
-                className="btn-primary px-8 py-3 rounded-lg text-sm font-medium inline-block"
+                className="btn-gold px-8 py-3.5 rounded-lg text-sm font-medium inline-block"
               >
                 Contact Us Now
               </Link>
